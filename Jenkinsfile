@@ -4,28 +4,28 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building the application...'
-                sh 'g++ -o hello_exec hello.cpp'
+                echo 'Building new.cpp...'
+                sh 'g++ -o new_exec new.cpp'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Running tests...'
-                sh './hello_exec'  // Executes the compiled C++ program
+                echo 'Running new_exec...'
+                sh './new_exec'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying the application...'
+                echo 'Deployment stage (placeholder)'
             }
         }
     }
 
     post {
         failure {
-            echo 'Pipeline failed! Check the error logs.'
+            echo 'Pipeline failed! Check the logs.'
         }
     }
 }

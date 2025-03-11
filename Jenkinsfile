@@ -9,7 +9,7 @@ pipeline {
             }
         }
 
-        stage('Test') {
+        stage('Test')
             steps {
                 echo 'Running new_exec...'
                 sh './new_exec'

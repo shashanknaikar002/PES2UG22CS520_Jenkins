@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building wrongfile.cpp...'
-                sh 'g++ -o new_exec wrongfile.cpp'  // ERROR: wrongfile.cpp does not exist!
+                echo 'Building new.cpp...'
+                sh 'g++ -o new_exec new.cpp'
             }
         }
 
